@@ -14,6 +14,12 @@
   "author": "Mustafa Mokrani <mokrani.mustafa@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
+    "esm": "^3.2.25",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "ts-node": "^10.2.1"
+  },
+  "devDependencies": {
     "jest": "^27.0.6"
   }
 }

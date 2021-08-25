@@ -3,18 +3,19 @@
  *
  * See the test if you have questions
  */
- function getLastNumbers(linkedList, lastItemsCount) {
+module.exports = {
+   getLastNumbers : (linkedList, lastItemsCount) => { 
     let list = linkedList;
     const arr = [];
   
     while (list.next) {
       arr.push(list.data);
-      list = list.next;
+      list = list.next; 
     }
     arr.push(list.data);
   
     if (lastItemsCount >= arr.length) return arr;
   
     return arr.slice(arr.length - lastItemsCount, arr.length);
+   }
   }
-  module.exports = getLastNumbers

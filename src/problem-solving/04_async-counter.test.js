@@ -1,4 +1,4 @@
-import { count } from './04_async-counter.js';
+const  count = require('./04_async-counter.js');
 
 const ms = 100;
 
@@ -55,6 +55,6 @@ describe('counter', () => {
     });
 
     it('should provide a method to cancel the counting', function (done) {
-        testCount({ startCount: 1, endCount: 5, done, cancelAfter: 3 });
+        count({ startCount: 1, endCount: 5, done, cancelAfter: 3 });
     });
 });

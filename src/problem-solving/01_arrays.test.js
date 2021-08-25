@@ -1,4 +1,4 @@
-const arrays = require('./01_arrays')
+const arrays = require('./01_arrays.js');
 
 function getDefaultArray() {
     return [ 1, 2, 3, 4 ];

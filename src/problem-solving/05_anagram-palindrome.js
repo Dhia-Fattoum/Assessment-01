@@ -8,30 +8,21 @@
  * Constraints
  * contains only lowercase letters in the range ascii[a..z]
  */
- 
-const isPalindromePossible = function (input){
-    let obj = {}
-    let str = input.split('')
-    for (ele of str){
-      if (obj.hasOwnProperty(ele)){
-        obj[ele] += 1
-      } else{
-        obj[ele] = 1
-      }
-    }
-    console.log(obj)
-    let val = Object.values(obj)
-    console.log(val)
-    let bool = {true:0,false:0}
-    for(ele of val){
-      if(ele % 2 === 0){
-        bool[true] += 1
-      } else{
-        bool[false] += 1
-      }
-    }
-    console.log(bool)
-  
-    return (bool[false] <= 1 && bool[true] >= 0 && input.length > 1)
+ function isPalindromePossible(string) {
+ let set = new Set();
+ let listOfchar = [...string];
+
+ listOfchar.forEach((char) => {
+   if (set.has(char)) {
+     set.delete(char);
+   } else {
+     set.add(char);
+   }
+ });
+
+ return set.size < 2 ? true : false;
+}
+
+  module.exports= {
+    isPalindromePossible
   }
-  module.export = isPalindromePossible

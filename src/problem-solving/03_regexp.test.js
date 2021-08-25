@@ -1,5 +1,4 @@
-import answers from './03_regexp.js';
-
+const answers  = require ('./03_regexp.js');
 describe('regexp', () => {
     it('you should be able to detect a number in a string', () => {
         expect(answers.containsNumber('abc123')).toEqual(true);
@@ -9,7 +8,7 @@ describe('regexp', () => {
     it('you should be able to detect a repeating letter in a string', () => {
         expect(answers.containsRepeatingLetter('bookkeeping')).toEqual(true);
         expect(answers.containsRepeatingLetter('rattler')).toEqual(true);
-        expect(answers.containsRepeatingLetter('ZEPPELIN')).toEqual(true);
+        expect(answers.containsRepeatingLetter('zZEPPELIN')).toEqual(true);
         expect(answers.containsRepeatingLetter('cats')).toEqual(false);
         expect(answers.containsRepeatingLetter('l33t')).toEqual(false);
     });
